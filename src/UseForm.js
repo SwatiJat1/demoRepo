@@ -5,7 +5,6 @@ const UseForm = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
   console.log(errors);
@@ -20,7 +19,6 @@ const UseForm = () => {
         {...register("exampleRequired", {
           required: true,
           maxLength: 5,
-          onBlur: (e) => alert("================"),
         })}
       />
       {errors.exampleRequired && <span>This field is required</span>}
